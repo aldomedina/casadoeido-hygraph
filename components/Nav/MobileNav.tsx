@@ -1,6 +1,7 @@
 import React from "react";
 import { menu_items } from ".";
 import { usePathname } from "next/navigation";
+import LangControls from "./LangControls";
 
 const MobileNav = ({ isOpen }: { isOpen: boolean }) => {
   const pathname = usePathname();
@@ -23,6 +24,7 @@ const MobileNav = ({ isOpen }: { isOpen: boolean }) => {
               {el}
             </button>
           ))}
+          <LangControls customClass="text-xxl flex" />
         </div>
       )}
     </div>

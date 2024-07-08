@@ -18,7 +18,7 @@ const DesktopNav = () => {
           <Link href={`/${item}`}>{t(item)}</Link>
         </li>
       ))}
-      <li className="mr-5">
+      <li className="mr-10 md:mr-5">
         <button className={"btn btn-outline text-xs"}>{t("book-now")}</button>
       </li>
     </>

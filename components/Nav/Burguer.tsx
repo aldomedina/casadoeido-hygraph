@@ -8,7 +8,7 @@ const Burguer = ({
   onClick: MouseEventHandler<HTMLButtonElement>;
 }) => {
   return (
-    <li className="block md:hidden">
+    <li className="fixed top-5 right-4 md:hidden">
       <button type="button" onClick={onClick}>
         <svg
           className="h-6 w-6 fill-current"
