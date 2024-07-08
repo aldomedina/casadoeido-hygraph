@@ -1,0 +1,15 @@
+{
+  "home": { "test": "test message" },
+  "nav": {
+    "a-casa": "the house",
+    "acomodacoes": "ACCOMMODATIONS",
+    "experiencias": "experiences",
+    "explore": "explore",
+    "blog": "blog",
+    "termos": "terms & conditions",
+    "protecao": "privacy terms",
+    "faq": "faq",
+    "retiros": "retreats",
+    "book-now": "book now"
+  }
+}

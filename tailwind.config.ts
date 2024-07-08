@@ -7,14 +7,32 @@ const config: Config = {
     "./app/**/*.{js,ts,jsx,tsx,mdx}",
   ],
   theme: {
+    container: {
+      center: true,
+      padding: "1rem",
+    },
     extend: {
-      backgroundImage: {
-        "gradient-radial": "radial-gradient(var(--tw-gradient-stops))",
-        "gradient-conic":
-          "conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))",
+      boxShadow: {
+        "inner-border": "inset 0 0 0 1px rgba(0,0,0)",
+      },
+      backgroundImage: (theme) => ({
+        "hero-pattern": "url('/img/folhas.png')",
+      }),
+      fontSize: {
+        xxs: ".6rem",
+        xxl: "1.7rem",
+        xxxl: "2rem",
+        xxxxl: "2.4rem",
+        "mobile-menu": "2.5rem",
+      },
+      colors: {
+        beige: "#F8F6F4",
       },
     },
+    fontFamily: {
+      sans: ["sofia-pro", "sans-serif"],
+    },
   },
-  plugins: [],
+  plugins: [require("@tailwindcss/typography")],
 };
 export default config;

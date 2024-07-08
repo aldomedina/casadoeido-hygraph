@@ -1,0 +1,15 @@
+{
+  "home": { "test": "messagem de prova" },
+  "nav": {
+    "a-casa": "a casa",
+    "acomodacoes": "acomodações",
+    "experiencias": "experiências",
+    "explore": "explore",
+    "blog": "journal",
+    "termos": "termos e condições",
+    "protecao": "proteção de dados",
+    "faq": "faq",
+    "retiros": "retiros",
+    "book-now": "reserve já"
+  }
+}
