@@ -10,7 +10,13 @@ const Home = async ({ params }: { params: { locale: TLocales } }) => {
   return (
     <div>
       <div className="h-dvh w-full">
-        <Image src={heroImage.url} alt="hero" fill />
+        <Image
+          src={heroImage.url}
+          alt="hero"
+          fill
+          objectFit="cover"
+          objectPosition="top"
+        />
       </div>
     </div>
   );
