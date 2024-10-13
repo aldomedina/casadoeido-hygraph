@@ -38,3 +38,10 @@ export interface IACasaContent {
   imageCarousel: IImage[];
   finalCard: IBannerCard;
 }
+
+export interface IExperienciaContent {
+  title: string;
+  intro: any;
+  leftCard: IBannerCard;
+  rightCard: IBannerCard;
+}

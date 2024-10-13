@@ -1,12 +1,13 @@
 "use client";
 import { useRouter } from "@/navigation";
 import { useTranslations } from "next-intl";
+import React from "react";
 
 interface MainCardProps {
   img: string;
   title: string;
-  content: string;
-  href: string;
+  content: string | React.ReactNode;
+  href?: string;
   className?: string;
   imgCustomClass?: string;
   contentCustomClass?: string;
