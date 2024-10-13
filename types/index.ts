@@ -28,4 +28,5 @@ export interface IHomeContent {
   experienceTitle: string;
   experiencesListItem: string[];
   exploreBanner: IExploreBanner;
+  retreatsBanner: IBannerCard;
 }

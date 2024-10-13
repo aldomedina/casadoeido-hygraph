@@ -43,6 +43,14 @@ const getHomeContent = async (
         height
       }
     }
+    retreatsBanner {
+      image {
+        id
+        width
+        url
+        height
+      }
+    }
   }
   localizedData: homepages(locales: ${locales}) {
     bannerHouseCard {
@@ -63,7 +71,12 @@ const getHomeContent = async (
       title
       buttonText
       description
-      
+    }
+    retreatsBanner {
+      id
+      title
+      buttonText
+      description
     }
   }
 }
@@ -75,6 +88,7 @@ const getHomeContent = async (
     resp.nonLocalizedData,
     resp.localizedData
   );
+
   return response[0];
 };
 

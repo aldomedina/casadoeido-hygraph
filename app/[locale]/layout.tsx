@@ -2,6 +2,7 @@ import { NextIntlClientProvider } from "next-intl";
 import { getMessages } from "next-intl/server";
 import "../globals.css";
 import Nav from "@/components/Nav";
+import Footer from "@/components/Footer";
 
 export default async function LocaleLayout({
   children,
@@ -23,6 +24,7 @@ export default async function LocaleLayout({
         <NextIntlClientProvider messages={messages}>
           <div className="">{children}</div>
           <Nav />
+          <Footer />
         </NextIntlClientProvider>
       </body>
     </html>

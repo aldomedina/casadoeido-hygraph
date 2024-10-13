@@ -1,5 +1,5 @@
 {
-  "home": { "test": "messagem de prova" },
+  "home": { "experiencias": "experiências" },
   "nav": {
     "a-casa": "a casa",
     "acomodacoes": "acomodações",
@@ -11,5 +11,17 @@
     "faq": "faq",
     "retiros": "retiros",
     "book-now": "reserve já"
+  },
+  "common": {
+    "know-more": " conheça mais"
+  },
+  "footer": {
+    "morada": "address",
+    "contactos": "contactos",
+    "redes-sociais": "Siga-nos",
+    "subscribe": "subscrever",
+    "newsletter": "Vamos manter-nos em contato",
+    "termos": "termos e condições",
+    "protecao": "proteção de dados"
   }
 }

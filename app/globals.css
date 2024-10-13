@@ -10,6 +10,23 @@ body {
   .bg-folhas {
     @apply bg-beige bg-hero-pattern bg-cover bg-center bg-repeat-y;
   }
+  .loader {
+    border: 2px solid;
+    border-radius: 50%;
+    width: 16px;
+    height: 16px;
+    animation: spin 1s linear infinite;
+  }
+
+  @keyframes spin {
+    0% {
+      transform: rotate(0deg);
+    }
+    100% {
+      transform: rotate(360deg);
+    }
+  }
+
   .btn {
     @apply px-4 py-2 uppercase transition;
   }
