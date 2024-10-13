@@ -38,7 +38,7 @@ const ImageCarousel = ({ images, className }: ImageCarousel) => {
 
       <button
         onClick={prevSlide}
-        className="absolute left-0 top-0 w-20 h-full grid place-content-center hover:bg-stone-100/[.3]"
+        className="absolute left-0 top-0 w-20 h-full grid place-content-center hover:bg-gradient-to-r hover:from-stone-900/[.3]"
       >
         <svg
           xmlns="http://www.w3.org/2000/svg"
@@ -54,13 +54,13 @@ const ImageCarousel = ({ images, className }: ImageCarousel) => {
             transform="translate(716.127 239.215) rotate(90)"
             fill="none"
             stroke="#fff"
-            stroke-width="2"
+            strokeWidth="2"
           />
         </svg>
       </button>
       <button
         onClick={nextSlide}
-        className="absolute right-0 top-0 w-20 h-full grid place-content-center hover:bg-stone-100/[.3]"
+        className="absolute right-0 top-0 w-20 h-full grid place-content-center hover:bg-gradient-to-l hover:from-stone-900/[.3]"
       >
         <svg
           className="h-12 w-6"
@@ -76,7 +76,7 @@ const ImageCarousel = ({ images, className }: ImageCarousel) => {
             transform="translate(-697.692 -205.172) rotate(-90)"
             fill="none"
             stroke="#fff"
-            stroke-width="2"
+            strokeWidth="2"
           />
         </svg>
       </button>

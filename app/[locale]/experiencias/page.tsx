@@ -13,7 +13,7 @@ const AcomodacoesPage = async ({
   const { title, intro, leftCard, rightCard } = await getExperienciaContent(
     params.locale
   );
-  console.log({ rightCard });
+
   return (
     <div className="pt-16 md:pt-24 flex flex-col gap-20 md:gap-36 pb-20 md:pb-36">
       <FolhasSection>

@@ -22,6 +22,20 @@ interface IExploreBanner {
   title: string;
 }
 
+export interface IRoomCard {
+  id: string;
+  name: string;
+  features: any;
+  imageCarousel: IImage[];
+}
+
+export interface IAccommodationCard {
+  id: string;
+  name: string;
+  description: string;
+  rooms: IRoomCard[];
+}
+
 export interface IHomeContent {
   heroImage: IImage;
   bannerHouseCard: IBannerCard;
@@ -49,4 +63,18 @@ export interface IExperienciaContent {
 export interface IExploreContent {
   title: string;
   content: any;
+}
+
+export interface IAccommodationContent {
+  title: string;
+  intro: any;
+  roomCards: IAccommodationCard[];
+}
+
+export interface IBlogContent {
+  id: string;
+  title: string;
+  dateOfPublication: string;
+  backgroundImage: IImage;
+  post: any;
 }
