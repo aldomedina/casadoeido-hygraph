@@ -1,6 +1,7 @@
 "use client";
+import { useRouter } from "@/navigation";
 import { useTranslations } from "next-intl";
-import { useRouter } from "next/navigation";
+
 import React from "react";
 
 const ExploreSection = ({
