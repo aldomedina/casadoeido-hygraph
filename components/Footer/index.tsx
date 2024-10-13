@@ -1,7 +1,7 @@
-import Link from "next/link";
 import logo from "@/assets/logo/horizontal-logo-1.svg";
 import { useTranslations } from "next-intl";
 import MailchimpForm from "./MailchimpForm";
+import { Link } from "@/navigation";
 
 const footer_items = ["termos", "protecao", "faq"];
 

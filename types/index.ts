@@ -1,5 +1,5 @@
 export type TLocales = "en" | "pt";
-interface IImage {
+export interface IImage {
   id: string;
   height: number;
   width: number;
@@ -9,6 +9,7 @@ interface IImage {
 interface IBannerCard {
   title: string;
   description: string;
+  richDescription: any;
   buttonText: string;
   image: IImage;
 }
@@ -29,4 +30,11 @@ export interface IHomeContent {
   experiencesListItem: string[];
   exploreBanner: IExploreBanner;
   retreatsBanner: IBannerCard;
+}
+
+export interface IACasaContent {
+  title: string;
+  intro: any;
+  imageCarousel: IImage[];
+  finalCard: IBannerCard;
 }

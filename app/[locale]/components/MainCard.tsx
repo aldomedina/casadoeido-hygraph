@@ -1,8 +1,8 @@
 "use client";
+import { useRouter } from "@/navigation";
 import { useTranslations } from "next-intl";
-import { useRouter } from "next/navigation";
 
-interface HomeCardProps {
+interface MainCardProps {
   img: string;
   title: string;
   content: string;
@@ -13,7 +13,7 @@ interface HomeCardProps {
   contentWrapperCustomClass?: string;
 }
 
-const HomeCard = ({
+const MainCard = ({
   img,
   title,
   content,
@@ -22,7 +22,7 @@ const HomeCard = ({
   imgCustomClass,
   contentCustomClass,
   contentWrapperCustomClass,
-}: HomeCardProps) => {
+}: MainCardProps) => {
   const t = useTranslations("common");
   const router = useRouter();
   return (
@@ -53,4 +53,4 @@ const HomeCard = ({
   );
 };
 
-export default HomeCard;
+export default MainCard;

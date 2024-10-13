@@ -1,7 +1,8 @@
 import { useRouter, usePathname } from "next/navigation";
 import { menu_items } from ".";
-import Link from "next/link";
+
 import { useTranslations } from "next-intl";
+import { Link } from "@/navigation";
 
 const DesktopNav = () => {
   const pathname = usePathname();

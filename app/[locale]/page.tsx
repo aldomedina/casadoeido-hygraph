@@ -1,7 +1,7 @@
 import { getHomeContent } from "@/services";
 import { TLocales } from "@/types";
 import Image from "next/image";
-import HomeCard from "./components/HomeCard";
+import MainCard from "./components/MainCard";
 import ExperiencesCard from "./components/ExperiencesCard";
 import ExploreSection from "./components/ExploreSection";
 
@@ -32,7 +32,7 @@ const Home = async ({ params }: { params: { locale: TLocales } }) => {
       {/* A CASA & ACOMODAÇÕES */}
       <section>
         <div className="bg-beige container flex full-w flex-col md:flex-row p-5 md:p-10 md:pt-20">
-          <HomeCard
+          <MainCard
             href={"/a-casa"}
             title={bannerHouseCard.title}
             content={bannerHouseCard.description}
@@ -40,7 +40,7 @@ const Home = async ({ params }: { params: { locale: TLocales } }) => {
             imgCustomClass="mb-5"
             className="flex-1 md:mr-10 md:-mt-28 mb-10 md:mb-0"
           />
-          <HomeCard
+          <MainCard
             href={"/acomodacoes"}
             title={bannerAccomodationsCard.title}
             content={bannerAccomodationsCard.description}
@@ -54,7 +54,7 @@ const Home = async ({ params }: { params: { locale: TLocales } }) => {
       <ExperiencesCard list={experiencesListItem} title={experienceTitle} />
       {/* RETIROS */}
       <section className="bg-beige container flex full-w flex-col md:flex-row px-5 md:px-10">
-        <HomeCard
+        <MainCard
           href={"/retiros"}
           title={retreatsBanner.title}
           content={retreatsBanner.description}

@@ -1,6 +1,6 @@
-import Link from "next/link";
 import logo from "@/assets/logo/horizontal-logo.svg";
 import smallLogo from "@/assets/logo/small-logo-1.svg";
+import { Link } from "@/navigation";
 
 const ResponsiveLogo = () => {
   return (

@@ -3,9 +3,6 @@ import { useState } from "react";
 import DesktopNav from "./DesktopNav";
 import MobileNav from "./MobileNav";
 import Burguer from "./Burguer";
-import Link from "next/link";
-import logo from "@/assets/logo/horizontal-logo.svg";
-import smallLogo from "@/assets/logo/small-logo-1.svg";
 import ResponsiveLogo from "./ResponsiveLogo";
 import LangControls from "./LangControls";
 
