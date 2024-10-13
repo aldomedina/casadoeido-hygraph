@@ -13,7 +13,7 @@ const DesktopNav = () => {
         <li
           key={item + i}
           className={`${
-            pathname === item && "font-bold"
+            pathname.includes(item) && "opacity-50"
           } text-xs mr-5 hidden md:block hover:underline`}
         >
           <Link href={`/${item}`}>{t(item)}</Link>

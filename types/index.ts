@@ -45,3 +45,8 @@ export interface IExperienciaContent {
   leftCard: IBannerCard;
   rightCard: IBannerCard;
 }
+
+export interface IExploreContent {
+  title: string;
+  content: any;
+}

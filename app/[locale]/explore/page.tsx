@@ -1,13 +1,20 @@
-import FolhasSection from "@/components/FolhasSection";
 import React from "react";
+import FolhasSection from "@/components/FolhasSection";
+import { TLocales } from "@/types";
+import { getExploreContent } from "@/services";
+import RichContent from "@/components/RichContent";
 
-const AcomodacoesPage = () => {
+const AcomodacoesPage = async ({
+  params,
+}: {
+  params: { locale: TLocales };
+}) => {
+  const { title, content } = await getExploreContent(params.locale);
   return (
-    <div className="pt-16 md:pt-24 flex flex-col gap-20 md:gap-36 pb-20 md:pb-36">
+    <div className="pt-16 md:pt-24 flex flex-col gap-20 md:gap-36 ">
       <FolhasSection>
-        <h2 className="title text-center my-10 md:my-0 md:mb-10">Explore</h2>
-        <p className="text-md font-light mb-5">paragraph 1</p>
-        <p className="text-md font-light mb-5">paragraph 2</p>
+        <h2 className="title text-center my-10 md:my-0 md:mb-10">{title}</h2>
+        <RichContent content={content.raw} />
       </FolhasSection>
     </div>
   );
