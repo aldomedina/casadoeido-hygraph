@@ -11,8 +11,8 @@ export const menu_items = [
   "acomodacoes",
   "experiencias",
   "explore",
-  "blog",
   "retiros",
+  "blog",
 ];
 
 const Nav = () => {

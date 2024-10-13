@@ -1,3 +1,4 @@
+"use client";
 import { usePathname } from "next/navigation";
 import { menu_items } from ".";
 
@@ -20,7 +21,15 @@ const DesktopNav = () => {
         </li>
       ))}
       <li className="mr-10 md:mr-5">
-        <button className={"btn btn-outline text-xs"}>{t("book-now")}</button>
+        <button
+          className={"btn btn-outline text-xs"}
+          onClick={() => {
+            window.location.href =
+              "https://www.booking.com/hotel/pt/casa-do-eido-country-house.es.html";
+          }}
+        >
+          {t("book-now")}
+        </button>
       </li>
     </>
   );
