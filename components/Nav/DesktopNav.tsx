@@ -1,4 +1,4 @@
-import { useRouter, usePathname } from "next/navigation";
+import { usePathname } from "next/navigation";
 import { menu_items } from ".";
 
 import { useTranslations } from "next-intl";

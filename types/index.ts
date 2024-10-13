@@ -78,3 +78,13 @@ export interface IBlogContent {
   backgroundImage: IImage;
   post: any;
 }
+
+export interface ISimplePageContent {
+  title: string;
+  content: any;
+}
+
+export interface IRetiroContent {
+  title: string;
+  intro: any;
+}

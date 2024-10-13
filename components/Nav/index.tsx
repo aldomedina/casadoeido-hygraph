@@ -12,6 +12,7 @@ export const menu_items = [
   "experiencias",
   "explore",
   "blog",
+  "retiros",
 ];
 
 const Nav = () => {

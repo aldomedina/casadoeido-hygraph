@@ -60,10 +60,10 @@ const Footer = () => {
                 <Link href={"/faq"}>FAQ</Link>
               </li>
               <li className="text-xs uppercase mb-2">
-                <Link href={"/faq"}>{t("protecao")}</Link>
+                <Link href={"/privacy"}>{t("protecao")}</Link>
               </li>
               <li className="text-xs uppercase mb-2">
-                <Link href={"/faq"}>{t("termos")}</Link>
+                <Link href={"/terms"}>{t("termos")}</Link>
               </li>
               <li className="text-xs uppercase mb-2">
                 <a href={"https://www.ciab.pt/pt/"}>Resolução de Conflitos</a>
