@@ -13,10 +13,10 @@ const RetiroCard = ({
   url,
   startDate,
   endDate,
-  price,
+  externalUrl,
 }: IRetiroContent) => {
   const t = useTranslations("common");
-  console.log(startDate);
+  const isPast = endDate && new Date().getTime() > new Date(endDate).getTime();
   return (
     <div key={id} className="flex flex-col">
       <div className="relative">
@@ -24,6 +24,11 @@ const RetiroCard = ({
           className="min-h-55v md:min-h-50v w-full bg-cover bg-center"
           style={{ backgroundImage: `url(${image.url})` }}
         />
+        {isPast && (
+          <span className="absolute bg-white top-1 right-1 px-4 py-1 uppercase text-xxs">
+            {t("finished")}
+          </span>
+        )}
       </div>
       <div className="p-3 md:p-5 bg-beige">
         <div className="mb-10">
@@ -44,9 +49,11 @@ const RetiroCard = ({
             <Link href={`/retiros/${url}`}>
               <button className="btn btn-outline mr-2">{t("know-more")}</button>
             </Link>
-            <a href={url}>
-              <button className="btn btn-outline ">{t("book-now")}</button>
-            </a>
+            {externalUrl && (
+              <a href={externalUrl} target="_blank">
+                <button className="btn btn-outline ">{t("book-now")}</button>
+              </a>
+            )}
           </div>
         </div>
       </div>
