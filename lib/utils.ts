@@ -29,3 +29,28 @@ export function deepMergeObjects<T extends AnyObject, U extends AnyObject>(
 export function isObject(value: any): value is AnyObject {
   return value && typeof value === "object" && !Array.isArray(value);
 }
+
+export const combinedDataByIndex = <TNonLocalized, TLocalized>(data: {
+  nonLocalizedData: TNonLocalized[];
+  localizedData: TLocalized[];
+}): Array<TNonLocalized & TLocalized> => {
+  const { nonLocalizedData, localizedData } = data;
+
+  // Verificar que ambos arrays existan y tengan la misma longitud
+  if (
+    !nonLocalizedData ||
+    !localizedData ||
+    nonLocalizedData.length !== localizedData.length
+  ) {
+    console.error("Los arrays no coinciden o están vacíos");
+    return [];
+  }
+  const combinedDataByIndex = nonLocalizedData.map(
+    (item: any, index: number) => ({
+      ...item,
+      ...localizedData[index],
+    })
+  );
+
+  return combinedDataByIndex;
+};

@@ -26,7 +26,7 @@ const Nav = () => {
         }  transition-all duration-300 truncate flex flex-col justify-between container`}
       >
         <MobileNav isOpen={isOpen} />
-        <div className="flex justify-between items-center h-16 md:h-24">
+        <div className="flex gap-12 justify-between items-center h-16 md:h-24">
           {/* LOGO */}
           <div onClick={() => setIsOpen(false)}>
             <ResponsiveLogo />

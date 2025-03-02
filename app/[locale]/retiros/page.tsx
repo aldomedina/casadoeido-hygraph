@@ -5,14 +5,11 @@ import { TLocales } from "@/types";
 import React from "react";
 
 const RetiroPage = async ({ params }: { params: { locale: TLocales } }) => {
-  const { title, intro } = await getRetiroContent(params.locale);
-
+  const resp = await getRetiroContent(params.locale);
+  console.log({ resp });
   return (
     <div className="pt-16 md:pt-24 flex flex-col gap-20 md:gap-36 ">
-      <FolhasSection>
-        <h2 className="title text-center my-10 md:my-0 md:mb-10">{title}</h2>
-        <RichContent content={intro.raw} />
-      </FolhasSection>
+      <div className="container grid gap-5 md:gap-8 grid-cols-1 md:grid-cols-2 auto-rows-fr py-5 md:px-20 lg:px-36 md:py-10"></div>
     </div>
   );
 };

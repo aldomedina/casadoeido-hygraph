@@ -84,7 +84,20 @@ export interface ISimplePageContent {
   content: any;
 }
 
-export interface IRetiroContent {
+export interface IRetiroWorkshopLocalized {
   title: string;
-  intro: any;
+  subtitle: string;
+  duration: string;
+  program: any;
 }
+
+export interface IRetiroWorkshopNonLocalized {
+  url: string;
+  image: IImage;
+  startDate?: Date;
+  endDate?: Date;
+  externalUrl?: string;
+}
+
+export type IRetiroContent = IRetiroWorkshopLocalized &
+  IRetiroWorkshopNonLocalized;
