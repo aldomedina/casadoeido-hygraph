@@ -48,40 +48,56 @@ const getRetiroContentByUrl = async (
   locales: TLocales = "en",
   url: string
 ): Promise<IRetiroContent> => {
+  console.log("getRetiroContentByUrl", { locales, url });
+
+  // Match exactly your working query from Hygraph playground
   const query = gql`
-    query RetiroWorkshopByUrl {
-  nonLocalizedData: retiroWorkshop(where: {url: ${url}}, locales: en) {
-    id
-    url
-    image {
-      id
-      height
-      width
-      url
+    query RetiroWorkshopById {
+      nonLocalizedData: retiroWorkshop(where: {url: "${url}"}, locales: en) {
+        id
+        image {
+          id
+          height
+          width
+          url
+        }
+        startDate
+        endDate
+        price
+        externalUrl
+      }
+      localizedData: retiroWorkshop(where: {url: "${url}"}, locales: ${locales}) {
+        id
+        title
+        subtitle
+        duration
+        program {
+          raw
+        }
+      }
     }
-    startDate
-    endDate
-    price
-    externalUrl
-  }
-  localizedData: retiroWorkshop(where: {url: ${url}}, locales: ${locales}) {
-    id
-    url
-    title
-    subtitle
-    duration
-    program {
-      raw
-    }
-  }
-}
   `;
-  const resp: { localizedData: AnyObject; nonLocalizedData: AnyObject } =
-    await graphQLClient.request(query);
 
-  const response: IRetiroContent[] = deepMergeObjects({}, resp.localizedData);
+  try {
+    const resp: { localizedData: AnyObject; nonLocalizedData: AnyObject } =
+      await graphQLClient.request(query);
 
-  return response[0];
+    // Check if we have any data at all
+    if (!resp || (!resp.localizedData && !resp.nonLocalizedData)) {
+      console.error("Empty response from GraphQL:", resp);
+      throw new Error(`No retiro content found for URL: ${url}`);
+    }
+
+    // If we have at least one of the data objects, merge what we have
+    const mergedData = deepMergeObjects(
+      resp.nonLocalizedData || {},
+      resp.localizedData || {}
+    );
+
+    return mergedData;
+  } catch (error) {
+    console.error("GraphQL request failed:", error);
+    throw error;
+  }
 };
-
 export { getRetiroContent, getRetiroContentByUrl };
