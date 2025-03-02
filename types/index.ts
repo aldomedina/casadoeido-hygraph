@@ -92,11 +92,13 @@ export interface IRetiroWorkshopLocalized {
 }
 
 export interface IRetiroWorkshopNonLocalized {
+  id: string;
   url: string;
   image: IImage;
-  startDate?: Date;
-  endDate?: Date;
+  startDate?: string;
+  endDate?: string;
   externalUrl?: string;
+  price?: string;
 }
 
 export type IRetiroContent = IRetiroWorkshopLocalized &

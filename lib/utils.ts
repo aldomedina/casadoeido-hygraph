@@ -54,3 +54,15 @@ export const combinedDataByIndex = <TNonLocalized, TLocalized>(data: {
 
   return combinedDataByIndex;
 };
+
+export function formatDate(strDate: string) {
+  const date = new Date(strDate);
+  // Get month and add 1 since getMonth() returns 0-11
+  const month = (date.getMonth() + 1).toString().padStart(2, "0");
+
+  // Get day of the month
+  const day = date.getDate().toString().padStart(2, "0");
+
+  // Return formatted string
+  return `${month}/${day}`;
+}
